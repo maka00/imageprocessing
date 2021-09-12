@@ -2,6 +2,5 @@
 
 | directory| description |
 |---|---|
-|doc/gstreamer.md | GStreamer commandline usage [gstreamer.md](./doc/gstreamer.md) |
-|stereom | Simple stereomatching experiments
+|stereom | Simple stereomatching experiments (see: [stereo.md](./doc/stero.md))
 
