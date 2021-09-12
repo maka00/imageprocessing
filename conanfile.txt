@@ -1,0 +1,9 @@
+[requires]
+tbb/2020.0
+spdlog/1.9.2
+
+[options]
+opencv:contrib=True
+
+[generators]
+cmake
