@@ -2,5 +2,5 @@
 
 | directory| description |
 |---|---|
-|stereom | Simple stereomatching experiments (see: [stereo.md](./doc/stero.md))
+|stereom | Simple stereomatching experiments (see: [stereo.md](./doc/stereo.md))
 
