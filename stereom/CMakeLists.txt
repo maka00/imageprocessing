@@ -51,6 +51,8 @@ target_link_libraries(${PROJECT_NAME}
         opencv_core
         opencv_videoio
         opencv_highgui
+        opencv_calib3d
+        opencv_ximgproc
         ${PCL_LIBRARIES}
         )
 target_compile_features(${PROJECT_NAME}
