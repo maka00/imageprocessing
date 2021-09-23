@@ -80,7 +80,9 @@ cv::Mat openCV_stereomatching(cv::Mat& left, cv::Mat& right) {
     cv::Mat filtered_disp;
     wls_filter->filter(left_disp, left, filtered_disp, right_disp);
     SPDLOG_INFO("stereo matching apply filter to disparity.");
-    result = filtered_disp;
+    cv::Mat visual_disp;
+    cv::ximgproc::getDisparityVis(filtered_disp, visual_disp);
+    result = visual_disp;
     return result;
 }
 
@@ -130,6 +132,8 @@ int main(int argc, char** argv) {
     //dis = custom_stereomatching(left, right);
     dis = openCV_stereomatching(left,right);
     cv::imwrite(fmt::format("{}_depth.png",out_filename), dis);
+    cv::namedWindow("disparity", cv::WINDOW_AUTOSIZE);
+    cv::imshow("disparity", dis);
     SPDLOG_INFO("depth map written.");
 
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud = generate_pointcloud(dis);
